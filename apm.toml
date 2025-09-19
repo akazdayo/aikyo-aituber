@@ -1,0 +1,3 @@
+[project]
+plugins = []
+tools_dir = "./companion/tools/"
