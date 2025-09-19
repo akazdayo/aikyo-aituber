@@ -1,0 +1,23 @@
+{
+  "name": "aituber",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check:fix": "biome check --write",
+    "check": "biome check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "@aikyo/firehose": "^1.1.0",
+    "@aikyo/server": "^1.1.0",
+    "@aikyo/utils": "^1.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4"
+  }
+}
