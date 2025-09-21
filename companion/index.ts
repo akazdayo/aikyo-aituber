@@ -5,5 +5,5 @@ import { createFirehoseServer } from "./utils/firehose.ts";
 if (import.meta.main) {
   // Start servers
   createFirehoseServer();
-  createCompanionServer(kyokoCompanionCard, 1000);
+  createCompanionServer([kyokoCompanionCard], 1000);
 }
