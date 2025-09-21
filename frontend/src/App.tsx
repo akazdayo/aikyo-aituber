@@ -40,7 +40,10 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="flex min-h-screen w-screen flex-col bg-[radial-gradient(circle_at_top,rgba(44,62,80,0.6),#05050d)] font-sans text-slate-100">
+    <div
+      className="grid min-h-screen w-screen grid-rows-[auto_1fr_auto] bg-[radial-gradient(circle_at_top,rgba(44,62,80,0.6),#05050d)] font-sans text-slate-100"
+      style={{ minHeight: "100dvh" }}
+    >
       <header className="flex items-center justify-between border-b border-white/10 bg-black/30 px-8 py-5 backdrop-blur-xl">
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-bold uppercase tracking-[0.3em]">AIVTuber Studio</h1>
@@ -54,7 +57,7 @@ export const App = () => {
           <ConnectionBadge state={connectionState} />
         </div>
       </header>
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex min-h-0 overflow-hidden">
         <Stage
           className="flex-1 min-w-0"
           characters={filteredCharacters}

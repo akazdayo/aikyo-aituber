@@ -17,12 +17,12 @@ export const Stage = ({ characters, controlPanel, chatOverlay, className }: Stag
   return (
     <div
       className={cn(
-        "relative flex h-full w-full items-stretch justify-center px-6 py-6",
+        "relative flex h-full min-h-0 w-full items-stretch justify-center px-6 py-6",
         className,
       )}
     >
-      <div className="relative flex-1 overflow-hidden rounded-3xl border border-white/15 bg-[linear-gradient(160deg,rgba(16,24,48,0.9),rgba(14,0,36,0.9))] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
-        <Canvas className="h-full w-full" camera={{ position: [0, 1.6, 3.6], fov: 42 }} shadows>
+      <div className="relative flex-1 h-full min-h-[480px] overflow-hidden rounded-3xl border border-white/15 bg-[linear-gradient(160deg,rgba(16,24,48,0.9),rgba(14,0,36,0.9))] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
+        <Canvas className="absolute inset-0 h-full w-full" camera={{ position: [0, 1.6, 3.6], fov: 42 }} shadows>
           <color attach="background" args={["#060612"]} />
           <fog attach="fog" args={["#020208", 4, 12]} />
           <directionalLight
