@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:fix": "biome check --write",
     "check": "biome check",
-    "start": "tsx ./companion/index.ts"
+    "start": "tsx ./companion/index.ts",
+    "start:debug": "DEBUG=libp2p:* pnpm run start"
   },
   "keywords": [],
   "author": "",
