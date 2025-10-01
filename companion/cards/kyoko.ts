@@ -1,5 +1,9 @@
 import { anthropic } from "@ai-sdk/anthropic";
-import { CompanionAgent, type CompanionCard } from "@aikyo/server";
+import {
+  CompanionAgent,
+  type CompanionCard,
+  type Message,
+} from "@aikyo/server";
 import { speakTool } from "../tools/actions/speak";
 import { companionNetworkKnowledge } from "../tools/knowledges/networks";
 
@@ -57,7 +61,10 @@ export const companionCard: CompanionCard = {
   },
 };
 
+export const kyokoHistory: Message[] = [];
+
 export const kyokoCompanionCard = new CompanionAgent(
   companionCard,
   anthropic("claude-3-5-haiku-latest"),
+  kyokoHistory,
 );

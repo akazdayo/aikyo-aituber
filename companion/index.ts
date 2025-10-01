@@ -1,9 +1,9 @@
-import { kyokoCompanionCard } from "./cards/kyoko.ts";
-import { createCompanionServer } from "./utils/companion.ts";
-import { createFirehoseServer } from "./utils/firehose.ts";
+import { kyokoCompanionCard, kyokoHistory } from "./cards/kyoko";
+import { createCompanionServer } from "./utils/companion";
+import { createFirehoseServer } from "./utils/firehose";
 
-if (import.meta.main) {
-  // Start servers
+const startServer = (async () => {
   createFirehoseServer();
-  createCompanionServer([kyokoCompanionCard], 1000);
-}
+  createCompanionServer([kyokoCompanionCard], [kyokoHistory]);
+});
+startServer();
